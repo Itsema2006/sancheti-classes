@@ -1,0 +1,581 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sancheti Classes | Course Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#5a4400",
+                        "primary-fixed": "#ffdad7",
+                        "surface-white": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-container": "#fdfcff",
+                        "outline": "#926e6c",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdf97",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e7bcb9",
+                        "on-secondary-container": "#6f5400",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed-dim": "#f3bf2d",
+                        "surface-container-lowest": "#ffffff",
+                        "success-gold": "#F7C331",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#e7142b",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed": "#251a00",
+                        "on-primary-fixed-variant": "#930015",
+                        "inverse-primary": "#ffb3ae",
+                        "on-tertiary-fixed": "#011c37",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "academic-navy": "#122B46",
+                        "error": "#ba1a1a",
+                        "link-blue": "#007CFF",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#475d7b",
+                        "on-primary-fixed": "#410004",
+                        "tertiary-fixed": "#d2e4ff",
+                        "tertiary-container": "#5f7695",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-fixed-dim": "#b1c8ea",
+                        "primary": "#bb001e",
+                        "surface-tint": "#c0001f",
+                        "on-surface-variant": "#5e3f3d",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fcc836",
+                        "energy-red": "#ED1B2F",
+                        "on-background": "#191c1e",
+                        "secondary": "#775a00",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#314865",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "metric-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "metric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .achievement-glow {
+            box-shadow: 0 0 20px 2px rgba(247, 195, 49, 0.3);
+        }
+        .nav-underline-animate::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #ED1B2F;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+        .nav-underline-animate:hover::after {
+            width: 100%;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-energy-red selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface/95 border-b border-academic-navy/20 backdrop-blur-md shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="Sancheti Classes Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsn3RlxvIa5YKWoifzd6mhg2mms38sv_1QLBMBEo06CJKbFXujVNBliZkP-1iBx4wwJk7l1QodjmJdNSnCoxvGt27ttwM6DmeH2zERnGHL3bGBDy0usTQaU5x6HWK_hC0GxS5npxzBtHMewSQRZnwJH3FT5oYSq35HaiGcQySEZhEDH9T3ywcr96WMvaWujv75wPXNvUtScQbGeIXuo179F44ZIQer11xW-y6OUVgp4M5lAlsN594fwcgDW"/>
+</div>
+<div class="hidden md:flex items-center gap-6 text-[15px]">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#about">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="Achievements.html">Results</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#courses">Courses</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#students-corner">Students Corner</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#gallery">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#about">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#faq">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#testimonials">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#contact">Contact Screen</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Header -->
+<header class="relative overflow-hidden bg-academic-navy py-20 lg:py-32">
+
+<div class="relative px-margin-desktop max-w-container-max mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 bg-success-gold/20 text-success-gold px-4 py-1.5 rounded-full border border-success-gold/30">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Top Results 2024</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white leading-tight">
+                        Comprehensive <span class="text-success-gold">Academic Excellence</span> for Grades 8-12
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+                        Empowering students through rigorous training, expert mentorship, and a curriculum designed for board exams and competitive success.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-success-gold text-[32px]">school</span>
+<div>
+<p class="text-white font-bold">25+ Years</p>
+<p class="text-surface-variant text-sm">Legacy of Trust</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+<span class="material-symbols-outlined text-success-gold text-[32px]">group</span>
+<div>
+<p class="text-white font-bold">Expert Faculty</p>
+<p class="text-surface-variant text-sm">PhD &amp; IITians</p>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="relative z-10 rounded-2xl overflow-hidden border-8 border-white/10 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full aspect-video object-cover" data-alt="A professional group portrait of successful students and smiling teachers in a modern classroom setting with bright, natural lighting. The students are holding trophies and certificates, embodying expertise and achievement. The background is clean and academic, using the brand's navy and white colors with subtle red accents for a premium corporate feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOH-z2F56sblqr2KWFpBzu7j1Cqe16qus3QqrJJ3Z6LQZrwjNPqe_NnV5g2diUMDEeiBTJ_tCjt9-f8R4Z_Z1F4_4Zoogzc2hx7jp-5iLemnPM-YG-F6-2byqJ3jHcydwbUmPn7fTxYikHUeIn2SkqE_C4G9BtWrhWJGslu7BHKlyPORYLKySmC7JSsb8uxk5gRu0glBuKAJXignh6TtAFF_tX1pEyoUvHwnXepVJ5imrOl1V4pnMkcX_y80hIXUaYdB6dtXXDm5tM">
+</div>
+<div class="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-2xl shadow-xl border border-surface-variant flex items-center gap-4 animate-bounce">
+<div class="w-12 h-12 bg-energy-red rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="font-bold text-academic-navy">98.4% Success Rate</p>
+<p class="text-xs text-on-surface-variant">In CBSE &amp; SSC Boards 2023</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Course Selector Bento Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto scroll-mt-24" id="courses">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-academic-navy">Choose Your Success Path</h2>
+<p class="text-on-surface-variant font-body-md max-w-2xl mx-auto">Tailored coaching programs designed to bridge the gap between classroom learning and competitive edge.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- SSC / CBSE Card -->
+<div class="md:col-span-7 group relative overflow-hidden bg-white rounded-3xl p-8 border border-academic-navy/10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-8">
+<div class="p-3 bg-primary-fixed rounded-2xl">
+<span class="material-symbols-outlined text-primary text-[40px]">menu_book</span>
+</div>
+<span class="bg-academic-navy text-white px-4 py-1 rounded-full text-xs font-bold">FOUNDATION</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-academic-navy mb-4">Secondary Boards (8th, 9th, 10th)</h3>
+<p class="text-on-surface-variant mb-6">In-depth coverage of SSC &amp; CBSE syllabus with a focus on conceptual clarity and rigorous test series to ensure board toppers.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-academic-navy font-medium">
+<span class="material-symbols-outlined text-energy-red text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Topic-wise comprehensive notes
+                            </li>
+<li class="flex items-center gap-2 text-academic-navy font-medium">
+<span class="material-symbols-outlined text-energy-red text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Weekly assessment &amp; feedback
+                            </li>
+</ul>
+<button class="mt-auto inline-flex items-center gap-2 text-energy-red font-bold group-hover:gap-4 transition-all">
+                            View Curriculum <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- IIT-JEE / NEET Card -->
+<div class="md:col-span-5 group bg-academic-navy text-white rounded-3xl p-8 flex flex-col relative overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+
+<div class="relative z-10 flex flex-col h-full">
+<div class="p-3 bg-white/10 rounded-2xl w-fit mb-8">
+<span class="material-symbols-outlined text-success-gold text-[40px]">biotech</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Higher Secondary (11th &amp; 12th)</h3>
+<p class="text-surface-variant mb-6">Dedicated coaching for PCMB students aiming for IIT-JEE, NEET, and MHT-CET with expert faculty guidance.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="bg-white/5 p-3 rounded-lg border border-white/10">
+<p class="text-success-gold font-bold text-lg">IIT-JEE</p>
+<p class="text-xs opacity-70">Main &amp; Adv</p>
+</div>
+<div class="bg-white/5 p-3 rounded-lg border border-white/10">
+<p class="text-success-gold font-bold text-lg">NEET</p>
+<p class="text-xs opacity-70">Medical Entrance</p>
+</div>
+</div>
+<button class="mt-auto bg-energy-red text-white py-3 rounded-xl font-bold hover:bg-white hover:text-energy-red transition-colors">
+                            Enroll Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Curriculum Accordion -->
+<section class="bg-surface-container-low py-24">
+<div class="px-margin-desktop max-w-container-max mx-auto grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-academic-navy mb-6">Interactive Curriculum</h2>
+<p class="text-on-surface-variant mb-12">Our syllabus is meticulously structured to ensure every student masters the fundamentals before moving to complex problem-solving. Click a module to see the breakdown.</p>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<div class="bg-white rounded-2xl border border-academic-navy/10 overflow-hidden shadow-sm transition-all hover:shadow-md">
+<button class="w-full flex items-center justify-between p-6 text-left group" onclick="toggleAccordion(1)">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold">01</span>
+<span class="font-headline-md text-academic-navy">Science &amp; Tech Deep-Dive</span>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300" id="icon-1">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant border-t border-surface-variant/50 pt-4" id="content-1">
+<p class="mb-4">Comprehensive coverage of Physics, Chemistry, and Biology with live laboratory demonstrations and virtual simulations.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-energy-red"></span> Conceptual Lectures</div>
+<div class="flex items-center gap-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-energy-red"></span> Practical Sessions</div>
+<div class="flex items-center gap-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-energy-red"></span> Numerical Mastery</div>
+<div class="flex items-center gap-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-energy-red"></span> Revision Workshops</div>
+</div>
+</div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-white rounded-2xl border border-academic-navy/10 overflow-hidden shadow-sm transition-all hover:shadow-md">
+<button class="w-full flex items-center justify-between p-6 text-left group" onclick="toggleAccordion(2)">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-container flex items-center justify-center font-bold">02</span>
+<span class="font-headline-md text-academic-navy">Mathematical Logic &amp; Calculus</span>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300" id="icon-2">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant border-t border-surface-variant/50 pt-4" id="content-2">
+<p class="">From arithmetic foundations to advanced calculus and trigonometry, our math program focuses on shortcuts and logical deduction.</p>
+</div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-white rounded-2xl border border-academic-navy/10 overflow-hidden shadow-sm transition-all hover:shadow-md">
+<button class="w-full flex items-center justify-between p-6 text-left group" onclick="toggleAccordion(3)">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center font-bold">03</span>
+<span class="font-headline-md text-academic-navy">Competitive Test Strategies</span>
+</div>
+<span class="material-symbols-outlined transition-transform duration-300" id="icon-3">expand_more</span>
+</button>
+<div class="hidden px-6 pb-6 text-on-surface-variant border-t border-surface-variant/50 pt-4" id="content-3">
+<p class="">Simulated exam environments with time management training and error analysis reports for every student.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[400px]">
+<div class="absolute inset-0 bg-academic-navy rounded-3xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover mix-blend-soft-light opacity-60" alt="Sancheti Classes Award Ceremony" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeom72GiBIzhOXX-T7cq6H3bTlzujZ8OLVAn_s-row8eykqHyLjTQ4Ic9fttjZrvIZ7q-TOfbVFCfYw88U8qs4GwyIzdKsQ2xqUVGvHHzdPtTqbR1daZ58thpJy4bexO6nIB2Eo6i75FEIo68JQu676MBuWFSiIrMLhMWG7A4SvRje7RvVyuOHAW3hVCVc54u_6ZzrE9wUHR7QIzaKzK0yLElg-qmGKNJC765vi0L3MmGIZ4Ejoie58Hcr6zZ9r5Xs4OiAMqaLdGaO">
+<div class="absolute inset-0 flex flex-col justify-center items-center p-12 text-center text-white space-y-6">
+<div class="w-20 h-20 bg-success-gold rounded-full flex items-center justify-center achievement-glow">
+<span class="material-symbols-outlined text-academic-navy text-[40px]" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Watch a Demo Lecture</h3>
+<p class="text-surface-variant">Experience our teaching methodology through a sample chemistry session on Atomic Structure.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Batch Timings & Schedule -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-academic-navy mb-4">Flexible Batch Timings</h2>
+<p class="text-on-surface-variant">We understand school schedules. Our batches are divided into Morning and Evening sessions to suit your availability.</p>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container rounded-lg border border-outline-variant">
+<button class="bg-white text-academic-navy font-bold px-6 py-2 rounded-md shadow-sm">Weekdays</button>
+<button class="text-on-surface-variant px-6 py-2 rounded-md hover:bg-white/50 transition-colors">Weekends</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white border border-academic-navy/10 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-headline-md text-primary mb-6">Morning Batch</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">Grades 11-12</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">7:00 AM - 10:30 AM</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">NEET Special</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">8:00 AM - 12:00 PM</span>
+</div>
+<p class="text-xs text-on-surface-variant italic pt-2">*Ideal for college-going students</p>
+</div>
+</div>
+<div class="bg-white border-2 border-energy-red p-8 rounded-3xl shadow-lg relative transform scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-energy-red text-white px-4 py-1 rounded-full text-[10px] font-bold tracking-widest">MOST POPULAR</div>
+<h4 class="font-headline-md text-primary mb-6">Evening Batch</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">Grades 8-10</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">5:00 PM - 8:30 PM</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">JEE Crash Course</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">4:30 PM - 9:00 PM</span>
+</div>
+<p class="text-xs text-on-surface-variant italic pt-2">*Best for school-going students</p>
+</div>
+</div>
+<div class="bg-white border border-academic-navy/10 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-headline-md text-primary mb-6">Integrated Batch</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">IIT Foundation</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">Full Day (Sat-Sun)</span>
+</div>
+<div class="flex justify-between items-center pb-4 border-b border-surface-variant">
+<span class="text-academic-navy font-semibold">Scholarship Test</span>
+<span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded text-sm">11:00 AM - 1:00 PM</span>
+</div>
+<p class="text-xs text-on-surface-variant italic pt-2">*Comprehensive weekend learning</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Expert Advice Blog Snippets -->
+<section class="bg-academic-navy py-24 text-white">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-16">
+<h2 class="font-headline-lg text-headline-lg">Expert Advice &amp; Study Tips</h2>
+<a class="text-success-gold font-bold hover:underline" href="home.html#about">Explore Blog</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Blog Card 1 -->
+<div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors border border-white/10">
+<img class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A focused high school student studying at a clean desk with organized books, colorful highlights, and a laptop showing a learning management system. Soft, cool lighting creates a studious and ambitious mood, matching the brand's expertise Principle. The image style is professional and academic with a cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-L0KPvjjJC1OZuI3JiraVNdpkarP2s-v_z76QQ3RCW0vstX8Ib_IRv87M0-ZVK5zgXAG4i0uZMt1RZdiTgiUYlnyhHiWzs6dD4Bt-51Fd6AUXE20sOZ6oI4daQz6qElfQ8Sw3TjJ0-hbsJ3bymG5rSw41ElNS8yW-4VpAA07rUeYnTw1JOMDu_iMGQ0NdAySEqql1gx_V180Zc0hnGDI0TrAWzlyO_Pb5QwjNzCwp6vS0XHg3zwU-rdbtYp5XBt5X0rCsfwKt_J9j">
+<div class="p-6 space-y-3">
+<span class="text-[10px] text-success-gold font-bold tracking-widest uppercase">Exam Strategy</span>
+<h5 class="font-bold text-lg group-hover:text-success-gold transition-colors">How to Master Physics Numericals in 30 Days</h5>
+<p class="text-surface-variant text-sm line-clamp-2">Practical steps to overcome your fear of physics problems through daily practice...</p>
+</div>
+</div>
+<!-- Blog Card 2 -->
+<div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors border border-white/10">
+<img class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up of a high-quality scientific calculator, a neatly written notebook with mathematical derivations, and a pencil. The background is a slightly blurred academic setting. The lighting is warm and encouraging, focusing on the details of diligent study habits in a modern corporate educational style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZYwy3ULAAQZKv_FecKwsa5Ma8zVTpXEjzeCIid3bUkJzfYBLPnD8-WSgp8hbvCsT6PADIHabdRsBH-ms-Vmz-rCg-RiF8WSqD-2zk37wjRwc9GxI79IDBWgSWHXrLkvTG-iicj1hDfrZ-MggmdShtuRLU3A5K7pfWcmOoxnSHykC3QvH_Oe164IU6teBXDa4of5EW6gN2nEG76D1NBTA5SXvxyHjWn_RdWjE1ZgWZxDSJyluy1SyaRUfMuW66Ws1s3zQKjenQVBi">
+<div class="p-6 space-y-3">
+<span class="text-[10px] text-success-gold font-bold tracking-widest uppercase">Career Guidance</span>
+<h5 class="font-bold text-lg group-hover:text-success-gold transition-colors">Choosing Between PCMB, PCM and PCB after 10th</h5>
+<p class="text-surface-variant text-sm line-clamp-2">A comprehensive guide for students and parents to make the right choice for high school...</p>
+</div>
+</div>
+<!-- Blog Card 3 -->
+<div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors border border-white/10">
+<img class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A motivational image of a student standing confidently in front of a whiteboard filled with complex formulas and diagrams. The student looks optimistic and proud. The overall aesthetic uses deep navy tones with vibrant golden lighting accents to symbolize success and academic authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDukPGBk5Gr1gzHuqBJLj9fVUGEFOOuoRzUOG3IXKRrFj-rEAoqLmLw2opb7zXmq7-Le1u4SMRjtUjNfPTAJMi_x9t9wXuyKMADHWYIqwVVrlWGU_5gqBGRra3hcxwCgSdMDL3mTp92VcLA8GCSKH36E2cu_-CrMoni8h6MTwX6QcJnYTd_d-a1wQTEv6psOHBbxLcEryT0MT2b_5AeOs3lyBUj_zYCM8Ct2DgbFXqUvipqBAOh1_bfdZHXmtDCCFM4ZTfdRweg7Zo5">
+<div class="p-6 space-y-3">
+<span class="text-[10px] text-success-gold font-bold tracking-widest uppercase">Motivation</span>
+<h5 class="font-bold text-lg group-hover:text-success-gold transition-colors">Mindset Shift: Dealing with Competitive Exam Stress</h5>
+<p class="text-surface-variant text-sm line-clamp-2">Psychological tips from our expert counselors to keep your focus sharp and your mind calm...</p>
+</div>
+</div>
+<!-- Blog Card 4 -->
+<div class="group bg-white/5 rounded-2xl overflow-hidden hover:bg-white/10 transition-colors border border-white/10">
+<img class="w-full h-48 object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A brightly lit, modern classroom with ergonomic chairs and clean whiteboards, symbolizing a perfect learning environment. The image is crisp and professional, using a minimalist corporate style with subtle brand colors integrated into the furniture and decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSt3xF9ofhpPIba5iyz6klQL5fMqGosXMzl-Io2ImuOqmdGng5T5ExlvdhOuhdoBsKVgmncoRpOkfZ9TRUuW46Bw2C6fuo8wTL-a5oDBtLNgQBPfdugc9cE_eGfTMZ0e07GlyEQu76s-3w1B7q5lDL8-YPNr1OPEpxnEQOc6nmq0RsjN3iKDylREKepoO9Ixexb8o5klCXt8hNz76QCaO0vjrhzInwXlZSSyYEs9ai_5MjMtdw86DKW31_a1PF112UxRV0Flm2Gh87">
+<div class="p-6 space-y-3">
+<span class="text-[10px] text-success-gold font-bold tracking-widest uppercase">Resource</span>
+<h5 class="font-bold text-lg group-hover:text-success-gold transition-colors">Top 10 Books for JEE Preparation in 2024</h5>
+<p class="text-surface-variant text-sm line-clamp-2">Our faculty's recommended reading list to supplement your class notes and test papers...</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enrollment Section (Sticky/Floating Focus) -->
+<section class="py-24 bg-white relative scroll-mt-24" id="admissions">
+<div class="px-margin-desktop max-w-container-max mx-auto grid lg:grid-cols-12 gap-12">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-academic-navy">Start Your Journey Today</h2>
+<p class="text-on-surface-variant text-body-lg">Admissions are open for the academic year 2024-25. Fill out the form to schedule a free counseling session and scholarship test.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4" id="centers">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<p class="font-bold text-academic-navy">Contact Admissions</p>
+<p class="text-on-surface-variant">+91 98765 43210</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">location_on</span>
+</div>
+<div>
+<p class="font-bold text-academic-navy">Visit Our Main Center</p>
+<p class="text-on-surface-variant">123 Education Hub, MG Road, Pune, Maharashtra 411001</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-10 rounded-3xl border border-academic-navy/10 shadow-2xl relative">
+<div class="absolute -top-4 -right-4 bg-success-gold text-academic-navy font-extrabold px-6 py-2 rounded-xl shadow-lg transform rotate-3">
+                            LIMITED SLOTS!
+                        </div>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant">Student Name</label>
+<input class="w-full border-academic-navy/20 rounded-xl px-4 py-3 focus:border-energy-red focus:ring-energy-red/20 outline-none transition-all" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant">Phone Number</label>
+<input class="w-full border-academic-navy/20 rounded-xl px-4 py-3 focus:border-energy-red focus:ring-energy-red/20 outline-none transition-all" placeholder="+91 00000 00000" type="tel">
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant">Select Course</label>
+<select class="w-full border-academic-navy/20 rounded-xl px-4 py-3 focus:border-energy-red focus:ring-energy-red/20 outline-none transition-all">
+<option>8th-10th SSC/CBSE</option>
+<option>11th-12th JEE/NEET</option>
+<option>IIT Foundation (8th-10th)</option>
+<option>MHT-CET Special</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant">School/College</label>
+<input class="w-full border-academic-navy/20 rounded-xl px-4 py-3 focus:border-energy-red focus:ring-energy-red/20 outline-none transition-all" placeholder="School Name" type="text">
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-on-surface-variant">Message (Optional)</label>
+<textarea class="w-full border-academic-navy/20 rounded-xl px-4 py-3 focus:border-energy-red focus:ring-energy-red/20 outline-none transition-all" placeholder="Tell us about your academic goals..." rows="3"></textarea>
+</div>
+<button class="w-full bg-energy-red hover:bg-primary text-white font-display-lg py-4 rounded-xl transition-all shadow-lg hover:shadow-energy-red/30 transform active:scale-95" type="submit">
+                                Secure My Counseling Session
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-academic-navy dark:bg-surface-container-lowest w-full py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md text-surface-white dark:text-academic-navy font-bold">Sancheti Classes</div>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm">Building the foundation for tomorrow's engineers, doctors, and leaders through dedicated mentorship.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-energy-red transition-colors text-white" href="home.html">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-energy-red transition-colors text-white" href="mailto:info@sancheticlasses.com">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="text-success-gold font-bold mb-6">Our Courses</h6>
+<ul class="space-y-4 text-surface-variant dark:text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#courses">SSC Coaching</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#courses">CBSE Foundation</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#courses">JEE Main &amp; Advanced</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#courses">NEET Medical</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-success-gold font-bold mb-6">Quick Links</h6>
+<ul class="space-y-4 text-surface-variant dark:text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#about">Privacy Policy</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#about">Terms of Service</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#admissions">Contact Us</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#admissions">Careers</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-success-gold font-bold mb-6">Support</h6>
+<ul class="space-y-4 text-surface-variant dark:text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#results">FAQ</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="home.html#courses">Site Map</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="studentsdash.html">Student Portal</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#admissions">Parent Login</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-surface-variant/10 text-center text-surface-variant/50 text-xs px-margin-desktop">
+            © 2024 Sancheti Classes. All rights reserved. Expertise. Encouragement. Results.
+        </div>
+</footer>
+<!-- Floating CTA -->
+<a class="fixed bottom-8 right-8 z-40 bg-energy-red text-white flex items-center gap-2 px-6 py-4 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all group" href="#admissions">
+<span class="material-symbols-outlined group-hover:animate-pulse">edit_note</span>
+<span class="font-bold">Check Now</span>
+</a>
+<script>
+        function toggleAccordion(id) {
+            const contents = document.querySelectorAll('[id^="content-"]');
+            const icons = document.querySelectorAll('[id^="icon-"]');
+            
+            contents.forEach(content => {
+                if(content.id === `content-${id}`) {
+                    content.classList.toggle('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+
+            icons.forEach(icon => {
+                if(icon.id === `icon-${id}`) {
+                    icon.classList.toggle('rotate-180');
+                } else {
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        }
+    </script>
+
+
+</body></html>

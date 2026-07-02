@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wall of Fame | Sancheti Classes - Expertise. Encouragement. Results.</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#5a4400",
+                        "primary-fixed": "#ffdad7",
+                        "surface-white": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "on-tertiary-container": "#fdfcff",
+                        "outline": "#926e6c",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffdf97",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e7bcb9",
+                        "on-secondary-container": "#6f5400",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-fixed-dim": "#f3bf2d",
+                        "surface-container-lowest": "#ffffff",
+                        "success-gold": "#F7C331",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-container": "#e7142b",
+                        "inverse-surface": "#2d3133",
+                        "background": "#f7f9fb",
+                        "on-secondary-fixed": "#251a00",
+                        "on-primary-fixed-variant": "#930015",
+                        "inverse-primary": "#ffb3ae",
+                        "on-tertiary-fixed": "#011c37",
+                        "surface-dim": "#d8dadc",
+                        "surface-container": "#eceef0",
+                        "academic-navy": "#122B46",
+                        "error": "#ba1a1a",
+                        "link-blue": "#007CFF",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#475d7b",
+                        "on-primary-fixed": "#410004",
+                        "tertiary-fixed": "#d2e4ff",
+                        "tertiary-container": "#5f7695",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary-fixed-dim": "#b1c8ea",
+                        "primary": "#bb001e",
+                        "surface-tint": "#c0001f",
+                        "on-surface-variant": "#5e3f3d",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fcc836",
+                        "energy-red": "#ED1B2F",
+                        "on-background": "#191c1e",
+                        "secondary": "#775a00",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#ffb3ae",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#314865",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat"],
+                        "metric-xl": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "metric-xl": ["36px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .achievement-card:hover .glow-effect {
+            opacity: 1;
+        }
+        .glow-effect {
+            transition: opacity 0.3s ease;
+            box-shadow: 0 0 25px rgba(247, 195, 49, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 dark:bg-surface/95 border-b border-academic-navy/20 backdrop-blur-md shadow-sm h-20">
+<div class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-4">
+<img alt="Sancheti Classes Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLsn3RlxvIa5YKWoifzd6mhg2mms38sv_1QLBMBEo06CJKbFXujVNBliZkP-1iBx4wwJk7l1QodjmJdNSnCoxvGt27ttwM6DmeH2zERnGHL3bGBDy0usTQaU5x6HWK_hC0GxS5npxzBtHMewSQRZnwH3FT5oYSq35HaiGcQySEZhEDH9T3ywcr96WMvaWujv75wPXNvUtScQbGeIXuo179F44ZIQer11xW-y6OUVgp4M5lAlsN594fwcgDW"/>
+</div>
+<div class="hidden md:flex items-center gap-6 text-[15px]">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#about">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="Achievements.html">Results</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#courses">Courses</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#students-corner">Students Corner</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#gallery">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#about">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#faq">FAQ</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#testimonials">Testimonials</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-energy-red transition-all duration-300 pb-1" href="home.html#contact">Contact Screen</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section: Wall of Fame -->
+<section class="relative bg-academic-navy py-24 overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="text-center">
+<h1 class="font-display-lg text-display-lg text-surface-white mb-6">Wall of Fame</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto mb-10">Celebrating the brilliance and hard work of our students. Year after year, Sancheti Classes continues its legacy of academic excellence.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
+<span class="block font-metric-xl text-metric-xl text-success-gold">15+</span>
+<span class="text-surface-variant font-label-md">Years of Excellence</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
+<span class="block font-metric-xl text-metric-xl text-success-gold">500+</span>
+<span class="text-surface-variant font-label-md">90%+ Scorers</span>
+</div>
+<div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/20">
+<span class="block font-metric-xl text-metric-xl text-success-gold">100/100</span>
+<span class="text-surface-variant font-label-md">Legacy in Maths</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Banner Image -->
+<section class="max-w-container-max mx-auto px-margin-desktop -mt-16 relative z-20">
+<div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-surface-white">
+<img alt="Result Banner 2025" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtbSWJhFMqja_eNmJzgZrGBXhPxseetRhmJtqa5UyjKUoeRBYmzM2ZkeD6O18AgAH5YcfoEwD6Nf8eoQck056hzAfRa8Uuhza9JaIyVDTqSaYTeOBXLfd9z5PshtisbSqLAaibug4mcpuE5y93jCNLNPMXCb-rkmSJd_TLoe3ltP4d3NQTaI_y3G2LGtFP3rgquP6sVTOrtF_tPHvpvCkK5Pf8H6myKFZmG5k9O98OW4ePsfecWxVGNMCeP"/>
+</div>
+</section>
+<!-- Filter & Grid Section -->
+<section class="py-24 bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-academic-navy mb-2">Academic Achievers</h2>
+<p class="text-on-surface-variant">Filter by year or examination board to explore our success stories.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-2 rounded-full bg-energy-red text-white font-bold shadow-md">All Results</button>
+<button class="px-6 py-2 rounded-full bg-surface-white text-academic-navy font-bold border border-academic-navy/20 hover:bg-surface-container transition-colors">SSC 2025</button>
+<button class="px-6 py-2 rounded-full bg-surface-white text-academic-navy font-bold border border-academic-navy/20 hover:bg-surface-container transition-colors">CBSE 2025</button>
+<button class="px-6 py-2 rounded-full bg-surface-white text-academic-navy font-bold border border-academic-navy/20 hover:bg-surface-container transition-colors">CET 2024</button>
+<button class="px-6 py-2 rounded-full bg-surface-white text-academic-navy font-bold border border-academic-navy/20 hover:bg-surface-container transition-colors">Archive</button>
+</div>
+</div>
+<!-- Results Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Faisal-Momin-optImize.jpg" alt="Faisal Momin">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Faisal Momin</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">79.00%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Chaitrali-Pasalkar-optImize.jpg" alt="Chaitrali Pasalkar">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Chaitrali Pasalkar</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">87.40%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Vikesh-Dhawan-optImize.jpg" alt="Vikesh Dhawan">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Vikesh Dhawan</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">77.06%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Shruti-Shinde-optImize.jpg" alt="Shruti Shinde">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Shruti Shinde</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">91.60%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Siddharth-Mandlecha-optImize.jpg" alt="Siddharth Mandlecha">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Siddharth Mandlecha</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">91.60%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Priya-Alhat-optImize.jpg" alt="Priya Alhat">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Priya Alhat</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">91.20%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Kajal-Jogdankar-optImize.jpg" alt="Kajal Jogdankar">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Kajal Jogdankar</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">89.00%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Ankita-Ramane-optImize.jpg" alt="Ankita Ramane">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Ankita Ramane</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">87.60%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Ranjeet-Pawar-optImize.jpg" alt="Ranjeet Pawar">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Ranjeet Pawar</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">83.60%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Zeenat-Shaikh-optImize.jpg" alt="Zeenat Shaikh">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Zeenat Shaikh</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">81.20%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+<div class="achievement-card group relative bg-surface-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+<div class="aspect-[4/5] bg-surface-container relative">
+<img class="w-full h-full object-cover" src="assets/Gauri-Gaikwad-optImize.jpg" alt="Gauri Gaikwad">
+<div class="absolute top-2 right-2 bg-success-gold text-academic-navy p-1 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="p-4 text-center border-t border-surface-variant">
+<h3 class="font-label-md text-label-md text-academic-navy truncate">Gauri Gaikwad</h3>
+<div class="font-metric-xl text-[24px] text-energy-red font-extrabold mt-1">81.00%</div>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">SSC 2025</span>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="inline-flex items-center gap-2 bg-academic-navy text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-primary transition-all group">
+                        Download Full Merit List 2025
+                        <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">download</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Stats Legacy Section -->
+<section class="py-24 bg-surface-container-low border-y border-surface-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-energy-red font-bold uppercase tracking-widest text-xs mb-4 block">Proven Track Record</span>
+<h2 class="font-headline-lg text-headline-lg text-academic-navy mb-6">The Legacy of 100/100</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Mathematics at Sancheti Classes isn't just about formulas; it's about perfection. For over a decade, we have consistently produced students who achieve a perfect score in board examinations.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-success-gold/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-success-gold" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-academic-navy">Specialized CET Batch</h4>
+<p class="text-sm text-on-surface-variant">Focused preparation for MHT-CET, JEE, and NEET with expert mentors.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-success-gold/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-success-gold" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-academic-navy">Personalized Analysis</h4>
+<p class="text-sm text-on-surface-variant">Weekly test series with deep analytical reports for every student.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-white p-8 rounded-3xl shadow-sm border border-surface-variant hover:border-energy-red transition-colors text-center">
+<div class="text-[40px] font-extrabold text-academic-navy mb-2">98%</div>
+<div class="text-xs font-bold uppercase tracking-wide text-on-surface-variant">Average Result Improvement</div>
+</div>
+<div class="bg-academic-navy p-8 rounded-3xl shadow-sm border border-transparent text-center">
+<div class="text-[40px] font-extrabold text-success-gold mb-2">2500+</div>
+<div class="text-xs font-bold uppercase tracking-wide text-surface-white/60">Students Trusted Us in 2024</div>
+</div>
+<div class="bg-energy-red p-8 rounded-3xl shadow-sm border border-transparent text-center col-span-2">
+<div class="text-[40px] font-extrabold text-white mb-2">Rank 1</div>
+<div class="text-xs font-bold uppercase tracking-wide text-white/70">Consistently in Top City Rankings</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Spotlight / Video Testimonials -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-academic-navy">In Their Own Words</h2>
+<p class="text-on-surface-variant mt-2">Hear from our students how Sancheti Classes transformed their academic journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Video Spotlight 1 -->
+<div class="bg-surface-white rounded-2xl overflow-hidden shadow-sm group">
+<div class="aspect-video relative overflow-hidden bg-black cursor-pointer">
+<img class="w-full h-full object-cover opacity-80" data-alt="Screenshot of a video interview with an excited student in a classroom setting, soft blurred background with Sancheti Classes logo, high production quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDGt282imNTdjS8pmaftNY6QevTf75EVrU5SsgcbYQgzHy3eYHIscNAxoTTj5x664j5AGmU_fOvSjGN4BDgGyvxn6-Nq3kKcclo74GN3ghSoP2fFmTcKTtY3H4_SLoDdtITU1jtU74hFTedp0nRntX_1hKYoKS5OXi4I9HodcOhNSdFlMu6g6UfK2ri9BCDdrGlqYTsN3ykOZK62iSGQUJmaALmdvikBmD_b225RFwVjEdAbTbX9AowsxJb-8DB4vnmvqcjuZPdZJj"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-energy-red w-16 h-16 rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-academic-navy mb-1">Strategies for 100/100 in Maths</h4>
+<p class="text-sm text-on-surface-variant">Sharwari share her secrets to managing time and conquering complex problems.</p>
+<div class="flex items-center gap-2 mt-4 text-success-gold">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-[12px] font-bold uppercase">Featured Interview</span>
+</div>
+</div>
+</div>
+<!-- Testimonial 1 -->
+<div class="bg-surface-white p-8 rounded-2xl border border-surface-variant/40 flex flex-col justify-between">
+<div>
+<div class="flex text-success-gold mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6 leading-relaxed">"The environment at Sancheti is electric. Every teacher is approachable and they truly care about our growth, not just our marks."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a cheerful female student, natural daytime lighting, high resolution professional headshot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbxtcRRSEi3gJPQ12u0bWteuPy4BPyKxGxhBNkCZdcU5Qjx0NI_A3y7Yw_uCalQZLaBR4cZwMiD2l9cFUyXFX2TE1W5ub5KbP0oeVT-ST3IgkpIkjCrfaRo0rIfqO7zhCjPU6_dn8_-8ktIWJbiVa3E2KKsZ3aKFQV8aZW-msrdjBwi8SFdf1ljrts3W6CFvcZvlMr3y9vQPh8t3BvZ07cw94yYnL4QnKl89PrFFy3sZgEi0eOM3onYAmRKbFKpay3dLWV92giUJ7h"/>
+</div>
+<div>
+<div class="font-bold text-academic-navy">Tanvi Marathe</div>
+<div class="text-[12px] text-on-surface-variant">Batch of 2024</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-white p-8 rounded-2xl border border-surface-variant/40 flex flex-col justify-between">
+<div>
+<div class="flex text-success-gold mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant mb-6 leading-relaxed">"Joining the CET crash course was the best decision. The shortcut techniques in Physics and Chemistry saved me so much time in the actual exam."</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young male student in a blue shirt, smiling confidently, studio lighting, academic portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyharzJIbCxlJpuvQgXvQ9lriaW24kjjFn4hNGc-zGBkKwMCF3o3lk2_amhwdomXguWp8xtV7daoLd0ncmaDJ9Q5j1M8qaM8MBB2-vPWdLbM78ryJOUDn6Iuz4DSAod--982WyR1UvIO5x1HSTUzsljtflPvXeZybQU0BEWS2rcCTWFgPQL37sJfNocm6NcInPU6UfHKtQO8HqHhPtL_jalNQyCLFCTsQYwrgzNE_QGkWQV-VTAYrAgUXNojTbPBLSp7t3iOrTdAkj"/>
+</div>
+<div>
+<div class="font-bold text-academic-navy">Aryan Sonawane</div>
+<div class="text-[12px] text-on-surface-variant">Batch of 2025</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-energy-red py-20 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Be Part of the Next Success Story</h2>
+<p class="text-white/80 font-body-lg mb-10 max-w-xl mx-auto">Admissions for 2025-26 Academic Year are now open for SSC, CBSE, and CET Integrated batches.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="bg-academic-navy text-white px-10 py-4 rounded-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all w-full sm:w-auto">Inquire Now</button>
+<button class="bg-white text-energy-red px-10 py-4 rounded-xl font-bold shadow-2xl hover:bg-surface-container transition-all w-full sm:w-auto">Book a Demo Class</button>
+</div>
+</div>
+<div class="absolute bottom-0 right-0 opacity-10 -mr-20 -mb-20">
+<span class="material-symbols-outlined text-[300px] text-white">workspace_premium</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-academic-navy dark:bg-surface-container-lowest w-full py-16 border-t border-surface-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-md text-headline-md text-surface-white dark:text-academic-navy font-bold mb-4 block">Sancheti Classes</span>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm mb-6 leading-relaxed">Pioneering quality education with a focus on holistic development and academic excellence. Expert faculty, small batches, and proven results.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-energy-red transition-colors" href="home.html"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-energy-red transition-colors" href="Achievements.html"><span class="material-symbols-outlined text-sm">smart_display</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-energy-red transition-colors" href="https://maps.google.com/?q=123%20Education%20Hub,%20MG%20Road,%20Pune,%20Maharashtra%20411001"><span class="material-symbols-outlined text-sm">location_on</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Quick Links</h5>
+<ul class="space-y-4 text-surface-variant dark:text-on-surface-variant">
+<li><a class="hover:text-success-gold transition-colors" href="home.html#courses">Courses Offered</a></li>
+<li><a class="text-success-gold font-bold" href="Achievements.html">Wall of Fame</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="index.html#admissions">Parent Portal</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="studentsdash.html">Student Login</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="index.html#centers">Centers &amp; Map</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Explore</h5>
+<ul class="space-y-4 text-surface-variant dark:text-on-surface-variant">
+<li><a class="hover:text-success-gold transition-colors" href="home.html#about">Privacy Policy</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="home.html#about">Terms of Service</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="index.html#admissions">Contact Us</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="index.html#admissions">Careers</a></li>
+<li><a class="hover:text-success-gold transition-colors" href="home.html#results">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">Head Office</h5>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm mb-4">Plot 42, Academic Plaza,<br/>Pune, Maharashtra 411001</p>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm mb-2">Phone: +91 98765 43210</p>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm">Email: info@sancheticlasses.com</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/10 text-center">
+<p class="text-surface-variant/60 dark:text-on-surface-variant text-xs">© 2024 Sancheti Classes. All rights reserved. Expertise. Encouragement. Results.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for topper cards
+        document.querySelectorAll('.achievement-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.zIndex = "30";
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.zIndex = "1";
+            });
+        });
+
+        // Simple tab filtering logic (visual state)
+        const filterButtons = document.querySelectorAll('button[class*="rounded-full"]');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-energy-red', 'text-white');
+                    b.classList.add('bg-surface-white', 'text-academic-navy');
+                });
+                btn.classList.remove('bg-surface-white', 'text-academic-navy');
+                btn.classList.add('bg-energy-red', 'text-white');
+            });
+        });
+    </script>
+</body></html>
