@@ -138,6 +138,16 @@
         .gallery-card {
             scroll-snap-align: center;
         }
+        .testimonials-track {
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+        .testimonials-track::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-card {
+            scroll-snap-align: start;
+        }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -346,23 +356,144 @@
 
 <!-- Testimonials Section -->
 <section class="py-24 bg-background scroll-mt-24" id="testimonials">
-<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-container-max mx-auto px-margin-desktop relative">
 <div class="text-center mb-12">
 <div class="font-headline-lg text-headline-lg text-academic-navy mb-4">Testimonials</div>
-<p class="text-on-surface-variant">What students and parents say about the learning environment.</p>
+<p class="text-on-surface-variant">Read inspiring words from our top-performing board exam students.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-variant">
-<p class="text-on-surface-variant mb-4">"The teachers explain every concept clearly and make revision very effective."</p>
-<div class="font-bold text-academic-navy">Student Feedback</div>
-</div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-variant">
-<p class="text-on-surface-variant mb-4">"The regular tests helped build confidence and improved my exam preparation."</p>
-<div class="font-bold text-academic-navy">Parent Feedback</div>
-</div>
-<div class="bg-white p-6 rounded-2xl shadow-sm border border-surface-variant">
-<p class="text-on-surface-variant mb-4">"A disciplined and encouraging atmosphere that keeps students focused."</p>
-<div class="font-bold text-academic-navy">Alumni Feedback</div>
+
+<div class="relative">
+<!-- Carousel Navigation Buttons -->
+<button aria-label="Previous testimonial" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 -translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-surface-variant items-center justify-center text-academic-navy hover:bg-energy-red hover:text-white transition-colors" type="button" id="testimonials-prev">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button aria-label="Next testimonial" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 translate-x-1/2 w-12 h-12 rounded-full bg-white shadow-lg border border-surface-variant items-center justify-center text-academic-navy hover:bg-energy-red hover:text-white transition-colors" type="button" id="testimonials-next">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+
+<div class="testimonials-track flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6" id="testimonials-track">
+  
+  <!-- Testimonial 1: Anjana Kallapur -->
+  <div class="testimonial-card flex-none w-full md:w-[calc(33.333%-16px)] bg-white p-8 rounded-2xl border border-surface-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+    <div>
+      <div class="flex items-center gap-1 text-success-gold mb-4">
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+      </div>
+      <p class="text-on-surface-variant font-medium text-sm md:text-base leading-relaxed mb-6 italic">
+        "Awesome clarity in fundamentals of every subject, betterment in language and a suitably efficient way of studying with Experts Advice are the unforgettable gift of Sancheti Classes to me."
+      </p>
+    </div>
+    <div class="flex items-center gap-4 border-t border-surface-variant/50 pt-4">
+      <div class="w-12 h-12 rounded-full overflow-hidden border border-surface-variant">
+        <img class="w-full h-full object-cover" src="assets/anjana_kallapur.png" alt="Anjana Kallapur">
+      </div>
+      <div>
+        <h4 class="font-bold text-academic-navy text-sm md:text-base leading-tight">Anjana Kallapur</h4>
+        <span class="text-[11px] font-bold text-energy-red uppercase tracking-wider">10th SSC (Maths 100/100)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial 2: Aditya Rasal -->
+  <div class="testimonial-card flex-none w-full md:w-[calc(33.333%-16px)] bg-white p-8 rounded-2xl border border-surface-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+    <div>
+      <div class="flex items-center gap-1 text-success-gold mb-4">
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+      </div>
+      <p class="text-on-surface-variant font-medium text-sm md:text-base leading-relaxed mb-6 italic">
+        "The practice tests and mock boards conducted by Sancheti Classes gave me the exact confidence I needed. The syllabus was finished on time, allowing plenty of revision."
+      </p>
+    </div>
+    <div class="flex items-center gap-4 border-t border-surface-variant/50 pt-4">
+      <div class="w-12 h-12 rounded-full overflow-hidden border border-surface-variant bg-surface-container" style="background-image: url('assets/cbse_akansha_ray.png'); background-size: cover; background-position: center;"></div>
+      <div>
+        <h4 class="font-bold text-academic-navy text-sm md:text-base leading-tight">Aditya Rasal</h4>
+        <span class="text-[11px] font-bold text-energy-red uppercase tracking-wider">10th CBSE (98.60%)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial 3: Srusti Gaikwad -->
+  <div class="testimonial-card flex-none w-full md:w-[calc(33.333%-16px)] bg-white p-8 rounded-2xl border border-surface-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+    <div>
+      <div class="flex items-center gap-1 text-success-gold mb-4">
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+      </div>
+      <p class="text-on-surface-variant font-medium text-sm md:text-base leading-relaxed mb-6 italic">
+        "Doubts are explained in very simple terms. The classroom environment is highly competitive but encouraging. Regular counseling sessions kept my stress levels low."
+      </p>
+    </div>
+    <div class="flex items-center gap-4 border-t border-surface-variant/50 pt-4">
+      <div class="w-12 h-12 rounded-full overflow-hidden border border-surface-variant">
+        <img class="w-full h-full object-cover" src="assets/srusti_gaikwad.png" alt="Srusti Gaikwad">
+      </div>
+      <div>
+        <h4 class="font-bold text-academic-navy text-sm md:text-base leading-tight">Srusti Gaikwad</h4>
+        <span class="text-[11px] font-bold text-energy-red uppercase tracking-wider">10th SSC (89.60%)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial 4: Umar Pathan -->
+  <div class="testimonial-card flex-none w-full md:w-[calc(33.333%-16px)] bg-white p-8 rounded-2xl border border-surface-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+    <div>
+      <div class="flex items-center gap-1 text-success-gold mb-4">
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+      </div>
+      <p class="text-on-surface-variant font-medium text-sm md:text-base leading-relaxed mb-6 italic">
+        "I was weak in Maths initially, but teachers at Sancheti built my fundamentals step by step. Scoring 93/100 in Maths is a dream come true for me."
+      </p>
+    </div>
+    <div class="flex items-center gap-4 border-t border-surface-variant/50 pt-4">
+      <div class="w-12 h-12 rounded-full overflow-hidden border border-surface-variant">
+        <img class="w-full h-full object-cover" src="assets/umar_pathan.png" alt="Umar Pathan">
+      </div>
+      <div>
+        <h4 class="font-bold text-academic-navy text-sm md:text-base leading-tight">Umar Pathan</h4>
+        <span class="text-[11px] font-bold text-energy-red uppercase tracking-wider">10th SSC (86.60%)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial 5: Ananya More -->
+  <div class="testimonial-card flex-none w-full md:w-[calc(33.333%-16px)] bg-white p-8 rounded-2xl border border-surface-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+    <div>
+      <div class="flex items-center gap-1 text-success-gold mb-4">
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+        <span class="material-symbols-outlined fill-current">star</span>
+      </div>
+      <p class="text-on-surface-variant font-medium text-sm md:text-base leading-relaxed mb-6 italic">
+        "Sancheti Science Academy provides outstanding training for competitive board exams. The shortcut tricks and regular assessment prepared me for MHT-CET very well."
+      </p>
+    </div>
+    <div class="flex items-center gap-4 border-t border-surface-variant/50 pt-4">
+      <div class="w-12 h-12 rounded-full overflow-hidden border border-surface-variant bg-surface-container" style="background-image: url('assets/cbse_alfaiz_shaikh.png'); background-size: cover; background-position: center;"></div>
+      <div>
+        <h4 class="font-bold text-academic-navy text-sm md:text-base leading-tight">Ananya More</h4>
+        <span class="text-[11px] font-bold text-energy-red uppercase tracking-wider">12th MHTCET (96.56%)</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 </div>
 </div>
@@ -576,6 +707,49 @@
                     if (e.key === 'Escape') closeLightbox();
                     if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
                     if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+                });
+            }
+
+            // Testimonials Slider Logic
+            const testimonialsTrack = document.getElementById('testimonials-track');
+            const testimonialsPrev = document.getElementById('testimonials-prev');
+            const testimonialsNext = document.getElementById('testimonials-next');
+
+            if (testimonialsTrack && testimonialsPrev && testimonialsNext) {
+                const getTestimonialStep = () => {
+                    const firstCard = testimonialsTrack.querySelector('.testimonial-card');
+                    if (!firstCard) return 0;
+                    const cardRect = firstCard.getBoundingClientRect();
+                    return cardRect.width + 24; // width + gap
+                };
+
+                const stepTestimonials = (direction) => {
+                    const step = getTestimonialStep() || 320;
+                    const maxScrollLeft = testimonialsTrack.scrollWidth - testimonialsTrack.clientWidth;
+                    let targetLeft = testimonialsTrack.scrollLeft + (direction * step);
+
+                    if (targetLeft > maxScrollLeft - 8) {
+                        targetLeft = 0;
+                    }
+
+                    if (targetLeft < 0) {
+                        targetLeft = maxScrollLeft;
+                    }
+
+                    testimonialsTrack.scrollTo({ left: targetLeft, behavior: 'smooth' });
+                };
+
+                testimonialsPrev.addEventListener('click', () => stepTestimonials(-1));
+                testimonialsNext.addEventListener('click', () => stepTestimonials(1));
+
+                let testimonialsTimer = window.setInterval(() => stepTestimonials(1), 4500);
+
+                testimonialsTrack.addEventListener('mouseenter', () => {
+                    window.clearInterval(testimonialsTimer);
+                });
+
+                testimonialsTrack.addEventListener('mouseleave', () => {
+                    testimonialsTimer = window.setInterval(() => stepTestimonials(1), 4500);
                 });
             }
         }());
