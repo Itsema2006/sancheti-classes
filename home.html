@@ -148,6 +148,38 @@
         .testimonial-card {
             scroll-snap-align: start;
         }
+        /* CET Cards Cursor Hover Interaction */
+        .cet-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cet-card .student-name {
+            transition: color 0.3s ease;
+        }
+        .cet-card .cet-score {
+            transition: color 0.3s ease;
+        }
+        .cet-card:hover {
+            background-color: #0d2847 !important; /* academic-navy */
+            border-color: #0d2847 !important;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.15) !important;
+        }
+        .cet-card:hover .student-name {
+            color: white !important;
+        }
+        .cet-card:hover .cet-score {
+            color: #fcd12a !important; /* success-gold */
+        }
+        .cet-grid:has(.cet-card:hover) .cet-card-active:not(:hover) {
+            background-color: white !important;
+            border-color: transparent !important;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1) !important;
+        }
+        .cet-grid:has(.cet-card:hover) .cet-card-active:not(:hover) .student-name {
+            color: #0d2847 !important;
+        }
+        .cet-grid:has(.cet-card:hover) .cet-card-active:not(:hover) .cet-score {
+            color: #e53e3e !important;
+        }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
@@ -324,45 +356,45 @@
 <div class="font-headline-lg text-headline-lg text-academic-navy mb-4">Proud to Announce our CET Achievers</div>
 <p class="text-academic-navy font-medium text-body-lg">Our best coaching classes in Pune let the students achieved excellence again. SANCHETI's focused efforts, proven study methodologies, expert teachers, precise study material and accurate test series is what makes all the difference.</p>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Topper 1 (Highlighted) -->
-<div class="bg-academic-navy p-6 rounded-2xl shadow-xl border-4 border-academic-navy hover:scale-105 transition-transform flex flex-col justify-between">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 cet-grid">
+<!-- Topper 1 (Highlighted by default) -->
+<div class="cet-card cet-card-active bg-academic-navy p-6 rounded-2xl shadow-xl border-4 border-academic-navy hover:scale-105 transition-all flex flex-col justify-between cursor-pointer">
 <div class="aspect-[4/5] overflow-hidden rounded-xl mb-6">
 <img class="w-full h-full object-cover" src="assets/cet_rutuja.jpg" alt="RUTUJA NIRMAL">
 </div>
 <div class="text-center">
-<p class="font-bold text-white text-lg tracking-wide uppercase">RUTUJA NIRMAL</p>
-<p class="font-bold text-success-gold mt-1 text-base uppercase">CET 97.08</p>
+<p class="font-bold text-white text-lg tracking-wide uppercase student-name">RUTUJA NIRMAL</p>
+<p class="font-bold text-success-gold mt-1 text-base uppercase cet-score">CET 97.08</p>
 </div>
 </div>
 <!-- Topper 2 -->
-<div class="bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-transform flex flex-col justify-between">
+<div class="cet-card bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-all flex flex-col justify-between cursor-pointer">
 <div class="aspect-[4/5] overflow-hidden rounded-xl mb-6">
 <img class="w-full h-full object-cover" src="assets/cet_yashraj.jpg" alt="YASHRAJ GALANDE">
 </div>
 <div class="text-center">
-<p class="font-bold text-academic-navy text-lg tracking-wide uppercase">YASHRAJ GALANDE</p>
-<p class="font-bold text-energy-red mt-1 text-base uppercase">CET 92.63</p>
+<p class="font-bold text-academic-navy text-lg tracking-wide uppercase student-name">YASHRAJ GALANDE</p>
+<p class="font-bold text-energy-red mt-1 text-base uppercase cet-score">CET 92.63</p>
 </div>
 </div>
 <!-- Topper 3 -->
-<div class="bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-transform flex flex-col justify-between">
+<div class="cet-card bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-all flex flex-col justify-between cursor-pointer">
 <div class="aspect-[4/5] overflow-hidden rounded-xl mb-6">
 <img class="w-full h-full object-cover" src="assets/cet_omkar.jpg" alt="OMKAR THITE">
 </div>
 <div class="text-center">
-<p class="font-bold text-academic-navy text-lg tracking-wide uppercase">OMKAR THITE</p>
-<p class="font-bold text-energy-red mt-1 text-base uppercase">CET 91.25</p>
+<p class="font-bold text-academic-navy text-lg tracking-wide uppercase student-name">OMKAR THITE</p>
+<p class="font-bold text-energy-red mt-1 text-base uppercase cet-score">CET 91.25</p>
 </div>
 </div>
 <!-- Topper 4 -->
-<div class="bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-transform flex flex-col justify-between">
+<div class="cet-card bg-white p-6 rounded-2xl shadow-lg border border-surface-variant hover:scale-105 transition-all flex flex-col justify-between cursor-pointer">
 <div class="aspect-[4/5] overflow-hidden rounded-xl mb-6">
 <img class="w-full h-full object-cover" src="assets/cet_shivam.jpg" alt="SHIVAM PRASAD">
 </div>
 <div class="text-center">
-<p class="font-bold text-academic-navy text-lg tracking-wide uppercase">SHIVAM PRASAD</p>
-<p class="font-bold text-energy-red mt-1 text-base uppercase">CET 90.71</p>
+<p class="font-bold text-academic-navy text-lg tracking-wide uppercase student-name">SHIVAM PRASAD</p>
+<p class="font-bold text-energy-red mt-1 text-base uppercase cet-score">CET 90.71</p>
 </div>
 </div>
 </div>
